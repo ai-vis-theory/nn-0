@@ -34,19 +34,19 @@ This section showcases the various plots generated to analyze the optimization d
 
 *   **Epoch-wise Zero Gradients (`assets/optimization-insight/zero_e7_grads.png`)**: This plot shows the number of gradients with an absolute value less than `1e-7` at each epoch, indicating how many parameters are in a near-zero gradient state.
 
-    ![Zero Gradients](../../../assets/optimization-insight/zero_e7_grads.png)
+    ![Zero Gradients](../../assets/optimization-insight/zero_e7_grads.png)
 
 *   **Fraction of Released Gradients (`assets/optimization-insight/frac_zero_grads_released.png`)**: This plot displays the fraction of gradient components that were previously in a low-value state (`|g| < 1e-5`) but have since been "released" (i.e., their magnitude increased).
 
-    ![Fraction of Released Gradients](../../../assets/optimization-insight/frac_zero_grads_released.png)
+    ![Fraction of Released Gradients](../../assets/optimization-insight/frac_zero_grads_released.png)
 
 *   **Fraction of Sign Flips (`assets/optimization-insight/frac_flip.png`)**: This plot tracks the fraction of gradient components that change their sign around zero from one epoch to the next, providing insight into oscillations during optimization.
 
-    ![Fraction of Sign Flips](../../../assets/optimization-insight/frac_flip.png)
+    ![Fraction of Sign Flips](../../assets/optimization-insight/frac_flip.png)
 
 *   **Weight Difference Norm (`assets/optimization-insight/wdiff.png`)**: This plot shows the norm of the difference between weight vectors in consecutive batches, illustrating the magnitude of weight updates over time.
 
-    ![Weight Difference Norm](../../../assets/optimization-insight/wdiff.png)
+    ![Weight Difference Norm](../../assets/optimization-insight/wdiff.png)
 
 *   **Layer-wise Gradient Signs (`assets/optimization-insight/layer_wise_grad_signs.png`)**: This heatmap visualizes the signs of gradients across all layers over the course of training.
     *   **Y-axis**: Training epochs.
@@ -56,8 +56,8 @@ This section showcases the various plots generated to analyze the optimization d
         *   Red: `gradient < 0` (and `|gradient| <= 1e-5`)
         *   Green: `gradient > 0` (and `|gradient| <= 1e-5`)
 
-    ![Layer-wise Gradient Signs](../../../assets/optimization-insight/layer_wise_grad_signs.png)
+    ![Layer-wise Gradient Signs](../../assets/optimization-insight/layer_wise_grad_signs.png)
 
 *   **Zoomed Layer-wise Gradient Signs (`assets/optimization-insight/zoomed_layer_wise_grad_signs.png`)**: A zoomed-in version of the above plot, providing a more detailed view of the gradient sign dynamics in a specific region.
 
-    ![Zoomed Layer-wise Gradient Signs](../../../assets/optimization-insight/zoomed_layer_wise_grad_signs.png)
+    ![Zoomed Layer-wise Gradient Signs](../../assets/optimization-insight/zoomed_layer_wise_grad_signs.png)
