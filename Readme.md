@@ -161,23 +161,46 @@ This section showcases the various plots generated to analyze the optimization d
 
 
 # Direction 1: Squeeze and Expansion (not Excitation) Network
-## Ablation 1
+## Ablation 0
    - Dataset: MNIST
    - Model: Input (32×32×3) → Flatten → 3072 → 1024 (Regular Perceptron) → 1024 → 32 → 512 (Squeeze–Expand) → 512 → 32 → 256 (Squeeze–Expand) → 256 → num_classes → Softmax
    - No data augmentation 
    - No regularization
    - Optimizer: Adam
-### Model Architecture 1
-![Squeeze and Expansion Network Type 1](assets/squeeze-and-exp/model_0.png)
+### Model Architecture
+![Squeeze and Expansion Network Type 0](assets/squeeze-and-exp/model_0.png)
 ### Weight Plots and Power Spectra
 ### Feature Plots and Power Spectra
 These plots are in the path : `notebooks/squeeze_expand_network_v0.ipynb`.
 
-## Ablation 2
+## Ablation 1
    - Model: Input (32×32×3) → Flatten → 3072 → 1024 (Regular Perceptron) → 1024 → 8 → 512 (Squeeze–Expand) → 512 → 8 → 256 (Squeeze–Expand) → 256 → num_classes → Softmax
-    - Other settings same as Ablation 1
-### Model Architecture 2
-![Squeeze and Expansion Network Type 2](assets/squeeze-and-exp/model_1.png)
+    - Other settings same as Ablation 0
+### Model Architecture
+![Squeeze and Expansion Network Type 1](assets/squeeze-and-exp/model_1.png)
 ### Weight Plots and Power Spectra
 ### Feature Plots and Power Spectra
 These plots are in the path : `notebooks/squeeze_expand_network_v1.ipynb`.
+
+
+## Ablation 2
+   - Model: Input (32×32×3) → Flatten → 3072 → 1024 (Regular Perceptron) → 1024 → 2 → 512 (Squeeze–Expand) → 512 → 2 → 256 (Squeeze–Expand) → 256 → num_classes → Softmax
+    - Other settings same as Ablation 0
+### Model Architecture
+![Squeeze and Expansion Network Type 2](assets/squeeze-and-exp/model_2.png)
+### Weight Plots and Power Spectra
+### Feature Plots and Power Spectra
+These plots are in the path : `assets/squeeze-and-exp/f_svd_analysis_2.pdf` , `assets/squeeze-and-exp/w_svd_analysis_2.pdf`. and `notebooks/squeeze_expand_network_v2.ipynb`.
+### Layerwise feature TSNE plots
+These plots are in the path : `assets/squeeze-and-exp/model_tsne_layers_2.pdf`.
+
+## Ablation 3
+   - Model: Input (32×32×3) → Flatten → 3072 → 1024 (Regular Perceptron) → 1024 → 1 → 512 (Squeeze–Expand) → 512 → 1 → 256 (Squeeze–Expand) → 256 → num_classes → Softmax
+    - Other settings same as Ablation 0
+### Model Architecture
+![Regular Perceptron Network](assets/squeeze-and-exp/model_3.png)
+### Weight Plots and Power Spectra
+### Feature Plots and Power Spectra
+These plots are in the path : `assets/squeeze-and-exp/f_svd_analysis_3.pdf` , `assets/squeeze-and-exp/w_svd_analysis_3.pdf`. and `notebooks/squeeze_expand_network_v3.ipynb`.
+### Layerwise feature TSNE plots
+These plots are in the path : `assets/squeeze-and-exp/model_tsne_layers_3.pdf`.
