@@ -157,3 +157,29 @@ This section showcases the various plots generated to analyze the optimization d
 *   **Zoomed Layer-wise Gradient Signs (`assets/optimization-insight/zoomed_layer_wise_grad_signs.png`)**: A zoomed-in version of the above plot, providing a more detailed view of the gradient sign dynamics in a specific region.
 
     ![Zoomed Layer-wise Gradient Signs](assets/optimization-insight/zoomed_layer_wise_grad_signs.png)
+
+
+
+# Direction 1: Squeeze and Expansion (not Excitation) Network
+## Ablation 1
+   - Dataset: MNIST
+   - Model: Input (32×32×3) → Flatten → 3072 → 1024 (Regular Perceptron) → 1024 → 32 → 512 (Squeeze–Expand) → 512 → 32 → 256 (Squeeze–Expand) → 256 → num_classes → Softmax
+   - No data augmentation 
+   - No regularization
+   - Optimizer: Adam
+### Model Architecture 1
+![Squeeze and Expansion Network Type 1](assets/squeeze-and-exp/model_0.png)
+### Weight Plots and Power Spectra
+![Weight Plots and Power Spectra](assets/squeeze-and-exp/weight_0.png)
+### Feature Plots and Power Spectra
+![Feature Plots and Power Spectra](assets/squeeze-and-exp/feature_0.png)
+
+## Ablation 2
+   - Model: Input (32×32×3) → Flatten → 3072 → 1024 (Regular Perceptron) → 1024 → 8 → 512 (Squeeze–Expand) → 512 → 8 → 256 (Squeeze–Expand) → 256 → num_classes → Softmax
+    - Other settings same as Ablation 1
+### Model Architecture 2
+![Squeeze and Expansion Network Type 2](assets/squeeze-and-exp/model_1.png)
+### Weight Plots and Power Spectra
+![Weight Plots and Power Spectra](assets/squeeze-and-exp/weight_1.png)
+### Feature Plots and Power Spectra
+![Feature Plots and Power Spectra](assets/squeeze-and-exp/feature_1.png)
