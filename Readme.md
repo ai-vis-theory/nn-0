@@ -170,9 +170,8 @@ This section showcases the various plots generated to analyze the optimization d
 ### Model Architecture 1
 ![Squeeze and Expansion Network Type 1](assets/squeeze-and-exp/model_0.png)
 ### Weight Plots and Power Spectra
-![Weight Plots and Power Spectra](assets/squeeze-and-exp/weight_0.png)
 ### Feature Plots and Power Spectra
-![Feature Plots and Power Spectra](assets/squeeze-and-exp/feature_0.png)
+These plots are in the path : `notebooks/squeeze_expand_network_v0.ipynb`.
 
 ## Ablation 2
    - Model: Input (32×32×3) → Flatten → 3072 → 1024 (Regular Perceptron) → 1024 → 8 → 512 (Squeeze–Expand) → 512 → 8 → 256 (Squeeze–Expand) → 256 → num_classes → Softmax
@@ -180,6 +179,5 @@ This section showcases the various plots generated to analyze the optimization d
 ### Model Architecture 2
 ![Squeeze and Expansion Network Type 2](assets/squeeze-and-exp/model_1.png)
 ### Weight Plots and Power Spectra
-![Weight Plots and Power Spectra](assets/squeeze-and-exp/weight_1.png)
 ### Feature Plots and Power Spectra
-![Feature Plots and Power Spectra](assets/squeeze-and-exp/feature_1.png)
+These plots are in the path : `notebooks/squeeze_expand_network_v1.ipynb`.
