@@ -204,3 +204,7 @@ These plots are in the path : `assets/squeeze-and-exp/model_tsne_layers_2.pdf`.
 These plots are in the path : `assets/squeeze-and-exp/f_svd_analysis_3.pdf` , `assets/squeeze-and-exp/w_svd_analysis_3.pdf`. and `notebooks/squeeze_expand_network_v3.ipynb`.
 ### Layerwise feature TSNE plots
 These plots are in the path : `assets/squeeze-and-exp/model_tsne_layers_3.pdf`.
+
+
+## Ablation 4 : Regular Perceptron Network
+   - Model: Input (32×32×3) → Flatten → 3072 → 8 → 1024 (Squeeze–Expand) → 8 → 512 (Squeeze–Expand) → 512 → 8 → 256 (Squeeze–Expand) → 256 → num_classes → Softmax
